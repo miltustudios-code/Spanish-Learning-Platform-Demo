@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#75172c">
+  <meta name="description" content="Demo de español A2 para centros de idiomas: ocho actividades, seguimiento del progreso y panel docente.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Español A2 · Miltu Studios</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2375172c'/%3E%3Cpath d='M6 8Q11 6 16 10Q21 6 26 8V24Q21 22 16 26Q11 22 6 24ZM16 10V26' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="academic.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir al contenido</a>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Menú principal">
+      <a class="brand" href="#inicio" data-view="home"><span class="brand-word">Español<span>.</span></span><span class="brand-school">Miltu Studios</span><span class="brand-place">DEMO PARA INSTITUTOS</span></a>
+      <p class="side-label" id="nav-label">TU APRENDIZAJE</p>
+      <nav id="navigation" aria-label="Secciones del aula"></nav>
+      <div class="sidebar-note"><span class="side-label">APRENDER EN CONTEXTO</span><p>Práctica entre clases.<br>Progreso que puedes ver.</p><span class="location" id="sidebar-context">Planes y tiempo libre · A2</span></div>
+      <div class="sidebar-bottom"><button class="side-link" data-action="about">Sobre la propuesta</button><span>Preparado por Miltu Studios</span></div>
+    </aside>
+    <div class="shell">
+      <header class="topbar">
+        <div class="topbar-start"><button class="icon-button mobile-menu" id="menu-button" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button><span class="topbar-title">Aula de práctica <span>/</span> <span id="breadcrumb">Mi aprendizaje</span></span><span class="demo-badge">Prototipo</span></div>
+        <div class="topbar-controls"><div class="role-switch" role="group" aria-label="Elegir experiencia"><button id="student-role" data-role="student" aria-pressed="true">Estudiante</button><button id="teacher-role" data-role="teacher" aria-pressed="false">Docente</button></div><div class="avatar" id="profile-avatar" aria-label="Alex, perfil ilustrativo">AL</div></div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="page-heading"><div><div class="eyebrow" id="page-eyebrow">DEMO PARA CENTROS DE ESPAÑOL</div><h1 id="page-title">Tu español, paso a paso.</h1><p id="page-subtitle">Un espacio para practicar, reforzar tus conocimientos y avanzar con confianza.</p></div><label class="level-label" id="level-control">Nivel de práctica<select id="level-select"><option value="A2">A2 · Planes y tiempo libre</option></select></label></div>
+        <div id="content"></div>
+        <footer class="footer"><span>Demo adaptable a tu centro · <b>Miltu Studios</b>.</span><button class="text-button" data-action="about">Datos ilustrativos · propuesta académica</button></footer>
+      </main>
+    </div>
+  </div>
+  <button class="mobile-shade" id="mobile-shade" aria-label="Cerrar menú" hidden></button>
+  <dialog id="practice-dialog" aria-labelledby="practice-title"><div class="dialog-top"><span id="practice-label" class="eyebrow"></span><button id="close-practice" class="icon-button" data-action="close-practice" aria-label="Cerrar actividad"><span data-icon="close"></span></button></div><div id="practice-content"></div></dialog>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-top"><span class="eyebrow" id="detail-label">PROPUESTA ACADÉMICA</span><button class="icon-button" data-action="close-detail" aria-label="Cerrar detalle"><span data-icon="close"></span></button></div><div id="detail-content"></div></dialog>
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><span class="eyebrow">Miltu Studios · demo para institutos</span><button class="icon-button" data-action="close-about" aria-label="Cerrar información"><span data-icon="close"></span></button></div><h2 id="about-title">Práctica entre clases. Información para enseñar.</h2><p>Una muestra de cómo tu centro puede ofrecer práctica estructurada entre clases, con su propia marca, materiales y seguimiento académico.</p><div class="about-grid"><section><h3>Para el estudiante</h3><p>Un tema A2 universal: planes y tiempo libre. Dos actividades por destreza, respuestas explicadas, modelos de escritura y práctica oral guiada.</p></section><section><h3>Para el docente</h3><p>Resultados por destreza, asignación de refuerzo y una bandeja de correcciones conectada con la experiencia del estudiante.</p></section><section><h3>Alcance de la demostración</h3><p>Los perfiles, resultados previos, fechas y clases son ficticios. Las acciones se guardan solo en este navegador. No hay cuentas reales ni sincronización entre dispositivos.</p></section><section><h3>Revisión académica</h3><p>Las actividades son originales y conceptuales. El temario, la evaluación y los materiales finales se adaptarían con tu centro. Las guías automáticas no acreditan un nivel de idioma.</p></section></div><p class="source-note">Actividades originales de muestra. El centro puede adaptar la marca, el temario, los niveles, los grupos y los criterios de evaluación. Esta demo no reproduce un examen oficial.</p><div class="button-row"><button class="button" data-action="close-about">Explorar el aula</button><button class="text-button" data-action="reset">Reiniciar datos de demostración</button></div></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">¿Reiniciar los datos de demostración?</h2><p>Se borrarán las respuestas, comentarios y asignaciones creados aquí. Volverán los perfiles y resultados ilustrativos iniciales.</p><div class="button-row"><button class="button secondary" data-action="cancel-reset">Conservar mis cambios</button><button class="button" data-action="confirm-reset">Reiniciar</button></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="notice">Activa JavaScript para usar las actividades y el panel docente.</p></noscript>
+</body>
+</html>
+
